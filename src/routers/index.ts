@@ -25,7 +25,7 @@ const router = createRouter({
     ]
 })
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async (to, _, next) => {
     
     const hasPermission = await checkAuth();
     if (to.name === "Home" && !hasPermission) {

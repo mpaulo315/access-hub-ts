@@ -12,8 +12,13 @@ import { RegisterUserZod } from "../../typings/User";
 import { zodResolver } from "@primevue/forms/resolvers/zod";
 import { Form, type FormSubmitEvent } from "@primevue/forms";
 import { isValid } from "../../utils/Forms";
+import { registerService } from "./services";
 
-const handleSubmit = (event: FormSubmitEvent<Record<string, any>>) => {
+const handleSubmit = async (event: FormSubmitEvent<Record<string, any>>) => {
+  const registerUser = RegisterUserZod.parse(event.values);
+  const response = await registerService(registerUser);
+  console.log(response);
+  
 };
 </script>
 
