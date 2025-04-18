@@ -13,6 +13,7 @@
     "@primevue/forms": "^4.3.3",
     "@tailwindcss/vite": "^4.1.4",
     "axios": "^1.8.4",
+    "pinia": "^3.0.2",
     "primevue": "^4.3.3",
     "tailwind": "^4.0.0",
     "tailwindcss-primeui": "^0.6.1",
